@@ -10,7 +10,7 @@ GitHub Pages (pending first push): **https://peterjiajunzhang.github.io/Schengen
 | `demos/` | Real export examples (5 diverse people, JPEG results) shown in the landing page's "Real exports" wall |
 | `screenshots/` | Real device screenshots (473×1024) — `01-home`, `02-checklist`, `04-paywall`, `05-exported`, `06-saved-photos`, `07-languages` |
 | `marketing/xiaohongshu-schengen/` | Xiaohongshu post previews & export scripts |
-| `marketing/appstore-schengen/` | App Store screenshot campaign (6-slide, 1284×2778) previews & export scripts |
+| `marketing/appstore-schengen/` | App Store screenshot campaign (7-slide, 1284×2778) previews & export scripts |
 
 **Status:** the iOS app has not shipped yet (no Apple ID). Landing page, App Store campaign, and screenshots are complete with real device captures. Only the App Store link itself is a placeholder.
 
