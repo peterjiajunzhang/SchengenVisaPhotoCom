@@ -86,6 +86,47 @@
             border: 1px solid rgba(15, 23, 42, 0.08);
             background: #fff;
         }
+        .demo-film {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            padding: 4px 2px 10px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .demo-film::-webkit-scrollbar { height: 8px; }
+        .demo-film::-webkit-scrollbar-thumb { background: rgba(15, 23, 42, 0.16); border-radius: 999px; }
+        .demo-film-item--original {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            width: auto;
+        }
+        .demo-film-original-wrap {
+            width: min(200px, 52vw);
+            border-radius: 22px;
+            overflow: hidden;
+            background: linear-gradient(165deg, #2c2c2e 0%, #1c1c1e 40%, #000 100%);
+            box-shadow:
+                0 16px 40px rgba(0, 0, 0, 0.22),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+            padding: 4px;
+        }
+        .demo-film-thumb-original {
+            width: 100%;
+            height: auto;
+            max-height: min(340px, 58vh);
+            display: block;
+            object-fit: contain;
+            object-position: center center;
+            border-radius: 18px;
+            background: #000;
+        }
+        .demo-film-label {
+            margin-top: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: rgba(15, 23, 42, 0.55);
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -214,15 +255,55 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-14">
                 <p class="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">Real exports</p>
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Different faces.<br><span class="text-brand">Same compliant result.</span></h2>
-                <p class="text-gray-500 text-lg max-w-3xl mx-auto">Five real exports from the app — different ages, skin tones, and hair — all cropped to <strong class="text-gray-700">35×45mm</strong> proportions on a clean white background.</p>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Any background in.<br><span class="text-brand">Compliant Schengen photo</span> out.</h2>
+                <p class="text-gray-500 text-lg max-w-3xl mx-auto">Real examples: kitchen, garden, hallway, street, home — then clean cutouts on white, cropped to <strong class="text-gray-700">35×45mm</strong> proportions.</p>
             </div>
+
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 max-w-5xl mx-auto justify-items-center">
                 <figure class="w-full flex flex-col items-center"><img src="demos/demo-01-result.jpg" alt="Schengen visa photo export example 1" class="demo-wall-img" width="420" height="540" decoding="async"></figure>
                 <figure class="w-full flex flex-col items-center"><img src="demos/demo-02-result.jpg" alt="Schengen visa photo export example 2" class="demo-wall-img" width="420" height="540" decoding="async"></figure>
                 <figure class="w-full flex flex-col items-center"><img src="demos/demo-03-result.jpg" alt="Schengen visa photo export example 3" class="demo-wall-img" width="420" height="540" decoding="async"></figure>
                 <figure class="w-full flex flex-col items-center"><img src="demos/demo-04-result.jpg" alt="Schengen visa photo export example 4" class="demo-wall-img" width="420" height="540" decoding="async"></figure>
                 <figure class="w-full flex flex-col items-center"><img src="demos/demo-05-result.jpg" alt="Schengen visa photo export example 5" class="demo-wall-img" width="420" height="540" decoding="async"></figure>
+            </div>
+
+            <div class="mt-10 max-w-6xl mx-auto">
+                <div class="flex items-center justify-between gap-4 mb-3">
+                    <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Originals (before) · full aspect, Photos-style</p>
+                    <p class="text-xs text-gray-400 hidden sm:block">Scroll &rarr;</p>
+                </div>
+                <div class="demo-film" aria-label="Original photo strip">
+                    <div class="demo-film-item--original">
+                        <div class="demo-film-original-wrap">
+                            <img src="demos/demo-01-original.jpg" alt="Original 1" class="demo-film-thumb-original" decoding="async">
+                        </div>
+                        <div class="demo-film-label">Home portrait</div>
+                    </div>
+                    <div class="demo-film-item--original">
+                        <div class="demo-film-original-wrap">
+                            <img src="demos/demo-02-original.jpg" alt="Original 2" class="demo-film-thumb-original" decoding="async">
+                        </div>
+                        <div class="demo-film-label">Kitchen</div>
+                    </div>
+                    <div class="demo-film-item--original">
+                        <div class="demo-film-original-wrap">
+                            <img src="demos/demo-03-original.jpg" alt="Original 3" class="demo-film-thumb-original" decoding="async">
+                        </div>
+                        <div class="demo-film-label">Garden</div>
+                    </div>
+                    <div class="demo-film-item--original">
+                        <div class="demo-film-original-wrap">
+                            <img src="demos/demo-04-original.jpg" alt="Original 4" class="demo-film-thumb-original" decoding="async">
+                        </div>
+                        <div class="demo-film-label">Balcony hallway</div>
+                    </div>
+                    <div class="demo-film-item--original">
+                        <div class="demo-film-original-wrap">
+                            <img src="demos/demo-05-original.jpg" alt="Original 5" class="demo-film-thumb-original" decoding="async">
+                        </div>
+                        <div class="demo-film-label">Street</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
