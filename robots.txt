@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://peterjiajunzhang.github.io/SchengenVisaPhotoCom/sitemap.xml
+Sitemap: https://schengen.visaphoto1tap.com/sitemap.xml
