@@ -6,6 +6,7 @@ Live site: **https://schengen.visaphoto1tap.com/**
 |------|---------|
 | `index.html` | Landing; App Store CTA is a **"Coming soon"** badge — swap in the App Store link once Connect assigns an Apple ID |
 | `privacy.html` | Privacy policy (linked from App Store Connect) |
+| `france-visa-photo/`, `germany-visa-photo/`, `spain-visa-photo/` and the same under `zh-hans/` | Country landing pages (English + Simplified Chinese, hreflang pairs, x-default = English). Each page cites the official page checked on 2026-11-17; re-check before editing facts. |
 | `sitemap.xml` / `robots.txt` | SEO |
 | `demos/` | Real export examples (5 diverse people, JPEG results) shown in the landing page's "Real exports" wall |
 | `screenshots/` | Real device screenshots (473×1024) — `01-home`, `02-checklist`, `04-paywall`, `05-exported`, `06-saved-photos`, `07-languages` |
@@ -35,7 +36,7 @@ Open **`VisaPhotoApps/README.md`** for full workstation setup.
 
 The homepage and privacy policy no longer load Tailwind or Lucide at runtime. The only third-party script left is the Cloudflare Web Analytics beacon.
 
-- **CSS**: `assets/tailwind.css` is prebuilt with Tailwind CSS v3.4.17 from `index.html` and `privacy.html`, using `tailwind.config.cjs` (the theme that used to be inline in the page) and `assets/tailwind.input.css`. After changing any class in `index.html` or `privacy.html`, rebuild it and commit the output:
+- **CSS**: `assets/tailwind.css` is prebuilt with Tailwind CSS v3.4.17 from `index.html`, `privacy.html` and the country pages, using `tailwind.config.cjs` (the theme that used to be inline in the page) and `assets/tailwind.input.css`. After changing any class in `index.html` or `privacy.html`, rebuild it and commit the output:
 
   ```bash
   npx tailwindcss@3.4.17 -c tailwind.config.cjs -i assets/tailwind.input.css -o assets/tailwind.css --minify

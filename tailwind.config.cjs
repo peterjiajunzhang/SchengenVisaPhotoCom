@@ -16,4 +16,4 @@ const siteConfig = {
     }
 };
 
-module.exports = { content: ['./index.html', './privacy.html'], ...siteConfig };
+module.exports = { content: ['./index.html', './privacy.html', './*-visa-photo/index.html', './*/*-visa-photo/index.html'], ...siteConfig };
