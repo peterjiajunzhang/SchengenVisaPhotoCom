@@ -4,7 +4,7 @@ Live site: **https://schengen.visaphoto1tap.com/**
 
 | Path | Purpose |
 |------|---------|
-| `index.html` | Landing; App Store CTA is a **"Coming soon"** badge — swap in the App Store link once Connect assigns an Apple ID |
+| `index.html` | Landing with live iPhone App Store download |
 | `privacy.html` | Privacy policy (linked from App Store Connect) |
 | `france-visa-photo/`, `germany-visa-photo/`, `spain-visa-photo/` and the same under `zh-hans/` | Country landing pages (English + Simplified Chinese, hreflang pairs, x-default = English). Each page cites the official page checked on 2026-11-17; re-check before editing facts. |
 | `sitemap.xml` / `robots.txt` | SEO |
@@ -13,13 +13,6 @@ Live site: **https://schengen.visaphoto1tap.com/**
 | `VisaPhotoApps/Marketing/Schengen/xiaohongshu/` | Xiaohongshu post previews & export scripts |
 | `VisaPhotoApps/Marketing/Schengen/appstore/` | App Store screenshot campaign (7-slide, 1284×2778) previews & export scripts |
 
-**Status:** the iOS app has not shipped yet (no Apple ID). Landing page, App Store campaign, and screenshots are complete with real device captures. Only the App Store link itself is a placeholder.
-
-## Before submitting to App Store Connect
-
-1. Once `SchengenVisaPhoto/Info.plist`'s `AppStoreAppleID` is filled in (after Connect creates the record), update the hero/footer CTA in `index.html` from the "Coming soon" badge to a real `https://apps.apple.com/app/id<id>` link (same pattern as `ChinaVisaPhotoCom/index.html`).
-2. If the app UI changes before launch, recapture screenshots into `screenshots/` (same 6 filenames) and re-run `cd VisaPhotoApps/Marketing/Schengen/appstore && npm run export`.
-3. The xiaohongshu deck (`VisaPhotoApps/Marketing/Schengen/xiaohongshu/`) still uses graphic/text cards rather than real screenshots — see that folder's README for how to upgrade it once you want to refresh the campaign.
 
 **iOS app repo:** [VisaPhotoApps](https://github.com/peterjiajunzhang/VisaPhotoApps) — scheme `SchengenVisaPhoto`.
 
@@ -45,3 +38,9 @@ The homepage and privacy policy no longer load Tailwind or Lucide at runtime. Th
 - **Icons**: Lucide icons are inline `<svg>` in `index.html`. Licence: `assets/licenses/lucide.txt` (ISC).
 - **App icons**: `assets/icons/*.webp` are resized copies of each app's `AppIcon.png`, the same files the US site uses; see `assets/icons/provenance.json`. `AppIcon.png` stays as the favicon and social image.
 - **Images**: PNG or JPG files over about 300 kB have a WebP copy next to them, and the page uses the WebP. The originals stay in the repo. Images below the fold use `loading="lazy"` and have their real `width`/`height`.
+
+## 2026-11-17 website update
+
+The homepage now describes the app’s actual checks and background replacement. It identifies the European Commission’s 29 Schengen members separately from the app’s additional Cyprus destination and generic preset. France, Germany and Spain keep their English and Simplified Chinese counterparts and share the same iPhone campaign as the homepage. The previous copy used compliant and conflated destination counts. Source: European Commission membership page and the app repository’s Schengen matrix.
+
+The iPhone download buttons share the App Store Connect campaign `schengen-website-20261117` with the matching Visa Photo 1-Tap links. The provider token is the one issued for this developer account. The structured app listing URL remains clean.
